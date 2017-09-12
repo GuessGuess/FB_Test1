@@ -15,7 +15,7 @@ public class Input extends Elements {
         super.driver = InitDriver.get().getDriver();
     }
 
-    public void sendKeys(String strText){
+    public void setText(String strText){
         if(isVisible()){
             driver.findElement(locator).sendKeys(strText);
         } else {

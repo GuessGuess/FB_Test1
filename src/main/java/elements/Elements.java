@@ -35,7 +35,7 @@ public abstract class Elements implements IElement {
     }
 
 
-    public void sendKeys(String strText) {
+    public void setText(String strText) {
         if (isVisible()){
             driver.findElement(locator).sendKeys(strText);
         } else

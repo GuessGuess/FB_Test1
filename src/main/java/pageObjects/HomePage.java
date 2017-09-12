@@ -3,7 +3,7 @@ package pageObjects;
 
 import elements.Button;
 import elements.Input;
-import elements.Lable;
+import elements.Label;
 import org.openqa.selenium.By;
 
 public class HomePage {
@@ -15,8 +15,8 @@ public class HomePage {
     private Button exit;
     private Button postButton;
     private Button postDelete;
-    private Lable myName;
-    private Lable postStatus;
+    private Label myName;
+    private Label postStatus;
 
 
     public static HomePage get(){
@@ -33,15 +33,15 @@ public class HomePage {
         exit = new Button(By.xpath(".//*[@id='js_2p']/div/div/ul/li[16]/a/span/span"));
         postButton = new Button(By.id("u_15_3"));
         postDelete = new Button(By.id(".//*[@id='u_17_0']/div/ul/li[1]/a/span/span"));
-        postStatus = new Lable(By.xpath(".//*[@id='js_19g']/div/p"));
-        myName = new Lable(By.xpath(".//*[@id='navItem_100000988949083']/a/div"));
+        postStatus = new Label(By.xpath(".//*[@id='js_19g']/div/p"));
+        myName = new Label(By.xpath(".//*[@id='navItem_100000988949083']/a/div"));
         return this;
     }
 
 
 
-    public void setPost(String setText){
-        post.sendKeys(setText);
+    public void setPost(String strText){
+        post.setText(strText);
     }
 
     public void clickSubmit(){
@@ -68,7 +68,7 @@ public class HomePage {
         return myName.getText();
     }
 
-    public String getPostStatus(){
+    public String  getPostStatus(){
         return postStatus.getText();
     }
 

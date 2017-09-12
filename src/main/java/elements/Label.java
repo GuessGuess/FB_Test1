@@ -5,8 +5,8 @@ import managers.InitDriver;
 import org.openqa.selenium.By;
 
 
-public class Lable extends Elements {
-    public Lable(By locator) {
+public class Label extends Elements {
+    public Label(By locator) {
         super(locator);
         super.driver = InitDriver.get().getDriver();
     }

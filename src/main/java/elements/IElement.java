@@ -8,7 +8,7 @@ public interface IElement {
 
     void click();
 
-    void sendKeys(String strText);
+    void setText(String strText);
 
     void clear();
 

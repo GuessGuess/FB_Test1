@@ -27,11 +27,11 @@ public class LoginPage {
     }
 
     public void setUserName(String strUserName){
-        userName.sendKeys(strUserName);
+        userName.setText(strUserName);
     }
 
     public void setPassword(String strPassword){
-        password.sendKeys(strPassword);
+        password.setText(strPassword);
     }
 
     public void clickLogin(){

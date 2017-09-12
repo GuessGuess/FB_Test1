@@ -3,9 +3,16 @@ package managers;
 
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
-import userActions.UserAction;
 
 public class GetModel extends InitDriver {
+    private static GetModel instance;
+
+    public static GetModel get(){
+        if(instance == null){
+            instance = new GetModel();
+        }
+        return instance;
+    }
 
     public LoginPage getLoginPage(){
         return LoginPage.get();
@@ -15,8 +22,6 @@ public class GetModel extends InitDriver {
         return HomePage.get();
     }
 
-    public UserAction getUserAction(){
-        return UserAction.get();
-    }
+
 
 }
